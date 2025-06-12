@@ -5,7 +5,7 @@ A backend API for a chatbot built with Laravel and PostgreSQL.
 
 ## 📄 License
 
-This project will be licensed under the [MIT License](LICENSE).
+This project will be licensed under the [MIT License](License).
 
 ## 🚧 Project Status
 
