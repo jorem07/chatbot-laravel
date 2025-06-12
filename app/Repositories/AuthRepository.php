@@ -28,18 +28,21 @@ class AuthRepository
                 ];
             }else{
                 $data = User::where('email', $request['email'])
-                                ->with('userInfo')
-                                ->with('roles')
-                                ->first();
+//                                 ->with('userInfo')
+//                                 ->with('roles')
+                                ->first();Login Copy
                 return [
                     'data' => [
                         'error'=>null,
                         'body'=>$data,
-                        'token' => $data->createToken('API token')->plainTextToken
                     ],
+                    'token' => $data->createToken('API token')->plainTextToken,
+
                     'status'=>200
                 ];
             }
         
     }
+
+
 }
