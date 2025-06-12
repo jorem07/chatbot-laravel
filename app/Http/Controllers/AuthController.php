@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
+
 use App\Http\Requests\Auth\Login;
 
 use App\Repositories\AuthRepository;
 use Illuminate\Support\Facades\Request;
+
 
 class AuthController extends Controller
 {
@@ -17,6 +19,7 @@ class AuthController extends Controller
         $this->authRepository = $authRepository;
     }
     
+
     public function login(Login $request): JsonResponse
     {
         $data = $this->authRepository->login($request);
@@ -27,6 +30,7 @@ class AuthController extends Controller
             $status = 200;
 
         return response()->json($data, $status);
+
     }
 
     public function logout(Request $request)
