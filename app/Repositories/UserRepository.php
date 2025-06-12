@@ -15,6 +15,12 @@ class UserRepository
 
     public function index() : Array
     {
-        return [];
+        $data = $this->userModel->get();
+        return [
+            'data'=>[
+                'body'=>$data
+            ],
+            'status'=>200
+        ];
     }
 }
