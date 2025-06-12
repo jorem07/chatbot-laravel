@@ -37,6 +37,8 @@ class AppAbilities extends Command
                 'role_id' => $adminRole->id
             ]);
 
+            Role::firstOrCreate(['name' => 'user']);
+            Role::firstOrCreate(['name' => 'guest']);
 
             $this->info('Admin user created successfully.');
         }
